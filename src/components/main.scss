@@ -1,0 +1,155 @@
+@import 'abstracts';
+
+.carousel {
+    width: 100vw;
+    height: 100vh;
+
+    overflow: scroll;
+    white-space: nowrap;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch; /* Needed to work on iOS Safari */
+
+    /* 2015 spec - For Firefox, Edge, IE */
+    scroll-snap-type: mandatory;
+    -ms-scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(100%);
+    -ms-scroll-snap-points-y: repeat(100%);
+
+    & > div {
+        scroll-snap-align: start;
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+}
+
+#logo-peter {
+    @extend %heading;
+    transform: rotate(10deg);
+    z-index: 2;
+    margin: 15px;
+    align-self: flex-end;
+}
+
+#logo-dulworth {
+    @extend %heading;
+    transform: rotate(-5deg);
+    align-self: flex-start;   
+}
+
+.page-primary {
+    @extend %page;
+    background-color: $primary-color;
+}
+
+.page-secondary {
+    @extend %page;
+    background: white;
+}
+
+.no-style-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+#school {
+    position: relative;
+        top: 100px;
+        left: 100px;
+    @extend %primary-text;
+}
+
+#degree-1, #degree-2 {
+    @extend %primary-text;
+}
+
+#job {
+    @extend %secondary-text;
+    position: relative;
+        top: 100px;
+        left: -100px;
+}
+
+#title, #date {
+    @extend %secondary-text;
+}
+
+#education {
+    @extend %heading;
+    transform: rotate(5deg);
+    &:hover {
+        transform: rotate(-5deg);
+        transition: transform 0.5s;
+    }
+}
+
+#experience {
+    @extend %heading;
+    transform: rotate(-5deg);
+    &:hover {
+        transform: rotate(5deg);
+        transition: transform 0.5s;
+    }
+}
+
+#resume {
+    @extend %heading;
+    transform: rotate(0deg);
+    &:hover {
+        transform: rotate(180deg);
+        transition: transform 1s;
+    }
+}
+
+#email {
+    @extend %secondary-text;
+    transform: translate(17vw, 15vh) rotate(45deg);
+    @include mq(700px) {
+        transform: translate(17vw, 20vh) rotate(45deg);
+    }
+}
+
+#phone {
+    @extend %secondary-text;
+    transform: translate(20vw, 2vh) rotate(-17deg);
+    @include mq(700px) {
+        transform: translate(20vw, 2vh) rotate(-17deg);
+    }
+}
+
+#github {
+    @extend %secondary-text;
+    transform: translate(10vw, 0) rotate(-10deg);
+    @include mq(700px) {
+        transform: translate(-15vw, 0) rotate(-10deg);
+    }
+}
+
+#linkedin {
+    @extend %secondary-text;
+    transform: translate(10vw, 10vh) rotate(25deg);
+    @include mq(700px) {
+        transform: translate(-15vw, 10vh) rotate(25deg);
+    }
+}
+
+#contact {
+    @extend %heading;
+    transform: scale(0.5) rotate(90deg);
+    
+    &:hover {
+        transform: scale(3);
+        transition: transform 1s;
+    }
+
+    @include mq(700px) {
+        transform: scale(0.8) rotate(90deg);
+    }
+}
+
+#click {
+    @extend %primary-text;
+    transform: translate(0, 100px) rotate(25deg);
+}

@@ -1,0 +1,222 @@
+#school, #degree-1, #degree-2, #click {
+  background: #100e16;
+  color: white;
+}
+
+#job, #title, #date, #email, #phone, #github, #linkedin {
+  background: white;
+  color: #100e16;
+}
+
+#logo-peter, #logo-dulworth, #education, #experience, #resume, #contact {
+  background: -webkit-gradient(linear, right top, left top, from(#ff8a00), to(#da1b60));
+  background: linear-gradient(to left, #ff8a00, #da1b60);
+  font-weight: 700;
+  font-size: 20vw;
+  margin: 10px;
+  color: white;
+}
+
+.page-primary, .page-secondary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.carousel {
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+  white-space: nowrap;
+  overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+  /* Needed to work on iOS Safari */
+  /* 2015 spec - For Firefox, Edge, IE */
+  scroll-snap-type: mandatory;
+  -ms-scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100%);
+  -ms-scroll-snap-points-y: repeat(100%);
+}
+
+.carousel > div {
+  scroll-snap-align: start;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+#logo-peter {
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  z-index: 2;
+  margin: 15px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+#logo-dulworth {
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.page-primary {
+  background-color: #100e16;
+}
+
+.page-secondary {
+  background: white;
+}
+
+.no-style-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+#school {
+  position: relative;
+  top: 100px;
+  left: 100px;
+}
+
+#job {
+  position: relative;
+  top: 100px;
+  left: -100px;
+}
+
+#education {
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+}
+
+#education:hover {
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+#experience {
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+}
+
+#experience:hover {
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+#resume {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+#resume:hover {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+#email {
+  -webkit-transform: translate(17vw, 15vh) rotate(45deg);
+          transform: translate(17vw, 15vh) rotate(45deg);
+}
+
+@media only screen and (max-width: 700px) {
+  #email {
+    -webkit-transform: translate(17vw, 20vh) rotate(45deg);
+            transform: translate(17vw, 20vh) rotate(45deg);
+  }
+}
+
+#phone {
+  -webkit-transform: translate(20vw, 2vh) rotate(-17deg);
+          transform: translate(20vw, 2vh) rotate(-17deg);
+}
+
+@media only screen and (max-width: 700px) {
+  #phone {
+    -webkit-transform: translate(20vw, 2vh) rotate(-17deg);
+            transform: translate(20vw, 2vh) rotate(-17deg);
+  }
+}
+
+#github {
+  -webkit-transform: translate(10vw, 0) rotate(-10deg);
+          transform: translate(10vw, 0) rotate(-10deg);
+}
+
+@media only screen and (max-width: 700px) {
+  #github {
+    -webkit-transform: translate(-15vw, 0) rotate(-10deg);
+            transform: translate(-15vw, 0) rotate(-10deg);
+  }
+}
+
+#linkedin {
+  -webkit-transform: translate(10vw, 10vh) rotate(25deg);
+          transform: translate(10vw, 10vh) rotate(25deg);
+}
+
+@media only screen and (max-width: 700px) {
+  #linkedin {
+    -webkit-transform: translate(-15vw, 10vh) rotate(25deg);
+            transform: translate(-15vw, 10vh) rotate(25deg);
+  }
+}
+
+#contact {
+  -webkit-transform: scale(0.5) rotate(90deg);
+          transform: scale(0.5) rotate(90deg);
+}
+
+#contact:hover {
+  -webkit-transform: scale(3);
+          transform: scale(3);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+@media only screen and (max-width: 700px) {
+  #contact {
+    -webkit-transform: scale(0.8) rotate(90deg);
+            transform: scale(0.8) rotate(90deg);
+  }
+}
+
+#click {
+  -webkit-transform: translate(0, 100px) rotate(25deg);
+          transform: translate(0, 100px) rotate(25deg);
+}
+/*# sourceMappingURL=main.css.map */

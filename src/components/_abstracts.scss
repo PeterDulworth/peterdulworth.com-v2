@@ -1,0 +1,34 @@
+$primary-color: rgb(16,14,22);
+$secondary-color: rgb(23, 20, 28);
+$gradient: linear-gradient(to left,#ff8a00,#da1b60);
+
+%primary-text {
+    background: $primary-color;
+    color: white;
+}
+
+%secondary-text {
+    background: white;
+    color: $primary-color;
+}
+
+%heading {
+    background: $gradient;
+    font-weight: 700;
+    font-size: 20vw;
+    margin: 10px;
+    color: white;
+}
+
+%page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin mq($width) {
+    @media only screen and (max-width: $width) {
+        @content;
+    }
+}
