@@ -1,6 +1,7 @@
 $primary-color: rgb(16,14,22);
 $secondary-color: rgb(23, 20, 28);
 $gradient: linear-gradient(to left,#ff8a00,#da1b60);
+$gradient2: linear-gradient(45deg, #7794ff, #44107A,#FF1361,#FFF800);
 
 %primary-text {
     background: $primary-color;
@@ -13,6 +14,7 @@ $gradient: linear-gradient(to left,#ff8a00,#da1b60);
 }
 
 %heading {
+    // letter-spacing: -20px;
     background: $gradient;
     font-weight: 700;
     font-size: 20vw;
@@ -31,4 +33,44 @@ $gradient: linear-gradient(to left,#ff8a00,#da1b60);
     @media only screen and (max-width: $width) {
         @content;
     }
+}
+
+@keyframes shake {
+    0% { transform: skewX(-15deg); }
+    5% { transform: skewX(15deg); }
+    10% { transform: skewX(-15deg); }
+    15% { transform: skewX(15deg); }
+    20% { transform: skewX(0deg); }
+    100% { transform: skewX(0deg); }  
+}
+
+@keyframes example {
+    from {
+        // margin-left: 100%;
+        // width: 400%; 
+        position: relative;
+        right: 100vw;
+      }
+
+    to {
+        // margin-left: 0%;
+        // width: 100%;
+        position: relative;
+        right: 0;
+    }
+}
+
+@mixin gradient-text($grad) {
+    text-decoration: none;
+    display: inline-block;
+    background-size: 120% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    background-image: $grad;
 }

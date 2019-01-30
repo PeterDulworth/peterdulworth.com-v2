@@ -3,12 +3,12 @@
   color: white;
 }
 
-#job, #title, #date, #email, #phone, #github, #linkedin {
+#title, #date, #email, #phone, #github, #linkedin, #job {
   background: white;
   color: #100e16;
 }
 
-#logo-peter, #logo-dulworth, #education, #experience, #resume, #contact {
+#logo-peter, #logo-dulworth, #education, #experience, #resume, #contact, #skills {
   background: -webkit-gradient(linear, right top, left top, from(#ff8a00), to(#da1b60));
   background: linear-gradient(to left, #ff8a00, #da1b60);
   font-weight: 700;
@@ -31,6 +31,82 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg);
+  }
+  5% {
+    -webkit-transform: skewX(15deg);
+            transform: skewX(15deg);
+  }
+  10% {
+    -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg);
+  }
+  15% {
+    -webkit-transform: skewX(15deg);
+            transform: skewX(15deg);
+  }
+  20% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
+  }
+  100% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg);
+  }
+  5% {
+    -webkit-transform: skewX(15deg);
+            transform: skewX(15deg);
+  }
+  10% {
+    -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg);
+  }
+  15% {
+    -webkit-transform: skewX(15deg);
+            transform: skewX(15deg);
+  }
+  20% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
+  }
+  100% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
+  }
+}
+
+@-webkit-keyframes example {
+  from {
+    position: relative;
+    right: 100vw;
+  }
+  to {
+    position: relative;
+    right: 0;
+  }
+}
+
+@keyframes example {
+  from {
+    position: relative;
+    right: 100vw;
+  }
+  to {
+    position: relative;
+    right: 0;
+  }
 }
 
 .carousel {
@@ -218,5 +294,32 @@
 #click {
   -webkit-transform: translate(0, 100px) rotate(25deg);
           transform: translate(0, 100px) rotate(25deg);
+}
+
+#skills2 {
+  font-weight: 700;
+  font-size: 20vw;
+  color: white;
+  letter-spacing: 6px;
+  text-decoration: none;
+  display: inline-block;
+  background-size: 120% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -ms-background-clip: text;
+  -ms-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  background-image: linear-gradient(45deg, #7794ff, #44107A, #FF1361, #FFF800);
+  -webkit-animation-name: example;
+          animation-name: example;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
 }
 /*# sourceMappingURL=main.css.map */

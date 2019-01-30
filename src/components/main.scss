@@ -54,27 +54,26 @@
     text-decoration: none;
 }
 
+#school, #degree-1, #degree-2, #click {
+    @extend %primary-text;
+}
+
 #school {
     position: relative;
         top: 100px;
         left: 100px;
-    @extend %primary-text;
 }
 
-#degree-1, #degree-2 {
-    @extend %primary-text;
+#title, #date, #email, #phone, #github, #linkedin, #job {
+    @extend %secondary-text;
 }
 
 #job {
-    @extend %secondary-text;
     position: relative;
         top: 100px;
         left: -100px;
 }
 
-#title, #date {
-    @extend %secondary-text;
-}
 
 #education {
     @extend %heading;
@@ -104,7 +103,6 @@
 }
 
 #email {
-    @extend %secondary-text;
     transform: translate(17vw, 15vh) rotate(45deg);
     @include mq(700px) {
         transform: translate(17vw, 20vh) rotate(45deg);
@@ -112,7 +110,6 @@
 }
 
 #phone {
-    @extend %secondary-text;
     transform: translate(20vw, 2vh) rotate(-17deg);
     @include mq(700px) {
         transform: translate(20vw, 2vh) rotate(-17deg);
@@ -120,7 +117,6 @@
 }
 
 #github {
-    @extend %secondary-text;
     transform: translate(10vw, 0) rotate(-10deg);
     @include mq(700px) {
         transform: translate(-15vw, 0) rotate(-10deg);
@@ -128,7 +124,6 @@
 }
 
 #linkedin {
-    @extend %secondary-text;
     transform: translate(10vw, 10vh) rotate(25deg);
     @include mq(700px) {
         transform: translate(-15vw, 10vh) rotate(25deg);
@@ -150,6 +145,29 @@
 }
 
 #click {
-    @extend %primary-text;
     transform: translate(0, 100px) rotate(25deg);
 }
+
+#skills {
+    @extend %heading;
+}
+
+
+
+#skills2 {
+    font-weight: 700;
+    font-size: 20vw;
+    color: white;
+    letter-spacing: 6px;
+
+    @include gradient-text($gradient2);
+
+    animation: {
+        name: example;
+        duration: 2s;
+        // direction: alternate;
+        iteration-count: infinite;
+        delay: 10s;
+    }
+}
+
