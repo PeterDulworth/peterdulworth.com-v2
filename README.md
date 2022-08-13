@@ -1,4 +1,8 @@
-Link: https://peterdulworth.github.io/peterdulworth.com-v2/
+Hosted on GithubPages: https://peterdulworth.github.io/peterdulworth.com-v2/
+
+### `npm run deploy`
+
+Deploy to github pages.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
